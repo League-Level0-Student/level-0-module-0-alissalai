@@ -15,6 +15,7 @@ public class MadlibsOfTheAmazon {
 		// Get the player to enter a type of liquid
 		String liquid = JOptionPane.showInputDialog("Enter a type of liquid");
 
+		
 		// Get the player to enter a body part
 
 		// Get the player to enter a verb
