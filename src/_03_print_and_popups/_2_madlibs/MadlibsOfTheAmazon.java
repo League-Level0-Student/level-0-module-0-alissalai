@@ -7,10 +7,13 @@ public class MadlibsOfTheAmazon {
 	public static void main(String[] args) {
 		// Put this sentence in a pop up:
 		String prompt =  "If you find yourself having to cross a piranha-infested river, here's how to do it...";
-		
+		JOptionPane.showMessageDialog(null, prompt);
+
 		// Get the player to enter an adjective
+		String adjective = JOptionPane.showInputDialog("Enter an adjective");
 
 		// Get the player to enter a type of liquid
+		String liquid = JOptionPane.showInputDialog("Enter a type of liquid");
 
 		// Get the player to enter a body part
 
