@@ -66,28 +66,35 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		
 		//7. Make a new int variable for the background color of the maze
+		int backgroundColor=-1499549;	
 		
-		System.out.println(backgroundColor);
+		//System.out.println(backgroundColor);
 		
 		//8. Run the program and move the mouse over the BACKGROUND COLOR. 
 		//   Use the number that is printed to the console to set the background color variable 
-		int backgroundColor=-1499549;	
-		
+		int endColor=-5317;
 		
 		if (started) {
+		if (backgroundColor == mouseColor)
+		{
+			scare();
+		}
 		
 		
 			//9. If the mouse falls off the path (which means it is on the background color)
 			//		call the scare method - scare();
 			
-			//13.  If the mouse is on the end color, pop up a message to tell them they won!
+			
+		//13.  If the mouse is on the end color, pop up a message to tell them they won!
 			//    (you will need to get the number of the END COLOR by moving the mouse over it)
-
+		if (endColor == mouseColor) {
+		JOptionPane.showMessageDialog(null, "Yay, you won!");
+		}
+		}
 					
 			
 		}	
-	}
-
+	
 	private void scare() {
 		
 		//Scare your player with scary messages, sounds and pictures

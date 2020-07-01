@@ -14,13 +14,16 @@ public class DragonFight {
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 
 		// 1. Create some variables to hold health levels
+		int playerHealth = 100;
+		int dragonHealth = 100;
 		
 			// playerHealth to store your health - set it equal to 100
 	
 			// dragonHealth to store the dragon's health - set it equal to 100
 
 		// 2. Create some variables to hold the attack strengths. These will be given different values later. 
-		
+		int playerAttack = 0;
+		int dragonAttack = 0;
 			// playerAttack to store the damage the player's attack will do - set it equal
 			// to 0 for now.
 	
@@ -35,16 +38,22 @@ public class DragonFight {
 
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
 				// or a kick
-	
+		String attack = JOptionPane.showInputDialog("Do you want to attack the dragon with a yell or a kick?");
 				// 4. If they typed in "yell":
-	
+		if (attack.equals("yell")) {
+		playerAttack = ran.nextInt(11); 
+		dragonHealth -= playerAttack;
+		}
 					// -- Find a random number between 0 and 10 and store it in playerAttack. Use
 					// ran.nextInt(10)
 		
 					// -- Subtract the player attack value from the dragon's health
 	
 				// 5. If they typed in "kick":
-	
+		if (attack.equals("kick")) {
+		playerAttack = ran.nextInt(26);
+		dragonHealth -= playerAttack;
+		}
 					// -- Find a random number between 0 and 25 and store it in playerAttack.
 		
 					// -- Subtract the player attack value from the dragon's health
@@ -52,14 +61,17 @@ public class DragonFight {
 			// THE DRAGON RETALIATES
 
 				// 6. Find a random number between 0 and 35 and store it in dragonAttack
-	
+		dragonAttack = ran.nextInt(36);
+		playerHealth -= dragonAttack;
+		
 				// 7. Subtract the dragon attack value from the player's health
 
 			// ASSESS THE DAMAGE CAUSED 
 
 				// 8. If the player's health is less than or equal to 0
 				// call the playerLost() method
-	
+		
+		
 			
 				// 9. Else if the dragon's health is less than or equal to 0
 				// call the dragonLost() method
