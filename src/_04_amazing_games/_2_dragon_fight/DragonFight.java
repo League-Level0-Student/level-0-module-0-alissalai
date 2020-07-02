@@ -70,16 +70,19 @@ public class DragonFight {
 
 				// 8. If the player's health is less than or equal to 0
 				// call the playerLost() method
-		
+			if (playerHealth <= 0) {
+				 playerLost();
+			}
 		
 			
 				// 9. Else if the dragon's health is less than or equal to 0
 				// call the dragonLost() method
-
-			
+			else if(dragonHealth <= 0){
+				dragonLost();
+			}
 			// 10.  Pop up a message that tells the player the health levels of player and
 			// 		dragon.
-
+			JOptionPane.showMessageDialog(null,playerHealth+" "+dragonHealth);
 			
 			// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
@@ -90,15 +93,15 @@ public class DragonFight {
 
 	static void playerLost() {
 		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
+		JOptionPane.showMessageDialog(null, "you have been defeated by the dragon and have no treasure");
 
 		System.exit(0);   //This code ends the program
 	}
 
 	static void dragonLost() {
 		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
-
-		System.exit(0);   //This code ends the program
+			JOptionPane.showMessageDialog(null, "You defeated the dragon and get lots of gold");
+			System.exit(0);   //This code ends the program
 	}
 
 }
